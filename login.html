@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="home-section">
+        <a href="./index.html" style="color: white; margin: 20px;">Home</a>
+    </div>
+    
+  <section>
+    <div class="form-box">
+        <div class="form-value">
+            <form action="">
+                <h2>Login</h2>
+                <div class="inputbox">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <input type="email" required>
+                    <label for="">Email</label>
+                </div>
+                <div class="inputbox">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <input type="password" id="myInput" required >
+                    <label for="">Password</label>
+                    
+                </div>
+                
+                <div class="forget" style="display:flex; flex-direction: column;">
+                    <div>
+                        <input type="checkbox" onclick="myFunction()">Show Password
+                    </div>
+                    <label for=""><input type="checkbox">Remember Me  <a href="#">Forget Password</a></label>
+                  
+                </div>
+                <button>Log in</button>
+                <div class="register">
+                    <p>Don't have a account <a href="./signup.html">Register</a></p>
+                </div>
+                <script>
+                    function myFunction() {
+                        var x = document.getElementById("myInput");
+                        if (x.type === "password") {
+                            x.type = "text";
+                        } else {
+                            x.type = "password";
+                        }
+                    }
+                </script>
+            </form>
+        </div>
+    </div>
+</section>
+</body>
+</html>

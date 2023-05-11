@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <STyle>
+        body{
+            background-image: url("https://images.unsplash.com/photo-1610391793022-e9d1ec4c4fed?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+            height: 100vh;
+            background-size: cover;
+
+        }
+        ::-webkit-scrollbar{
+            display: none;
+        }
+        H1{
+            text-align: center;
+            color: white;
+            border-radius: 5px;
+            padding: 10px;
+            
+        }
+        #container{
+            display: flex;
+            justify-content: center;
+        }
+        #payment{
+            width: 30%;
+            padding: 20px;
+            margin: 60px 60px;
+        }
+        #first-option{
+            border-bottom: 2px solid black;
+        }
+        .option{
+            padding: 10px;
+        }
+        img{
+        
+            
+            margin-top: 10px;
+        }
+        button{
+            color: black;
+            border-radius: 5px;
+            border: solid 1px;
+        }
+        .option button:active{
+            background: black;
+            background-image: linear-gradient(145deg, rgb(207, 141, 228), rgb(255, 136, 136));  
+        }
+        .price-card{
+            width: 30%;
+            margin: 60px 60px;
+            padding: 20px;
+            color: white;
+            backdrop-filter: blur(14px);
+            background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.05),  rgba(255, 255, 255, 0.1));
+            border-radius: 10px;
+            border: 2px solid rgb(229, 229, 229);
+
+        }
+        #price-details > div{
+            width: 100%;
+            margin: 20px 0;
+        }
+        #payment-price-container{
+            display: flex;
+            justify-content: center;
+            gap: 100px;
+        }
+        .prices{
+            display: flex;
+            justify-content: space-between;
+        }
+      
+
+    </STyle>
+</head>
+<body>
+    <div id="container">
+        <H1>Payments Option</H1>
+    </div>
+    <div id="payment-price-container" >
+        <div id="payment" class="price-card">
+            <img src="./payment.png" alt="">
+            <div class="option" id="first-option">
+                <img src="" alt="">
+                <h3>Online mode</h3>
+                <button type="button">Pay now</button>
+            </div>
+            <div class="option">
+                <h3>Cash on Delivery</h3>
+                <button type="button">Pay on delivery</button>
+            </div>
+        </div>
+        <div id="price-details" class="price-card">
+            <div>
+                Prise details
+            </div>
+            <div>
+                <div class="prices" style="border-top: 1px solid rgb(236, 236, 236);">
+                    <p>Price (1 items)</p>
+                    <p>₹100.00</p>
+                </div>
+    
+                <div class="prices" style="border-bottom: 2px solid white;">
+                    <p>Delivery charges*</p> 
+                    <p style="font-weight: bold; color: rgb(0, 255, 0);">FREE</p>
+                </div>
+            </div>
+            <div class="prices" >
+                <p>Net Payable</p>
+                <p>₹100.00</p>
+            </div>
+            
+        </div>
+    </div>
+    
+</body>
+</html>

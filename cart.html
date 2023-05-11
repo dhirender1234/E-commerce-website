@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+
+<style>
+#cart-section{
+    padding: 20px;
+}
+
+#cart-table{
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    white-space: nowrap;
+    margin-bottom: 60px;
+}
+#cart-section table img{
+    width: 70px;
+}
+#cart-section table thead{
+    border: 1px solid gray;
+    border-left: none;
+    border-right: none;
+}
+#cart-section table thead td{
+    font-weight: 700;
+    font-family: Nunito;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 10px 0;
+}
+
+#cart-section table tbody tr td{
+    padding: 10px;
+    color: rgb(77, 77, 77);
+}
+#cart-section table tbody tr td input{
+    padding: 10px;
+    width: 60px;
+}
+
+#cart-section table tbody tr:nth-child(even){
+    background-color:rgb(239, 239, 239) ;
+}
+#cart-section table td{
+    text-align: center;
+}
+#cart-section table tr td:nth-child(3){
+    width: 30%;
+}
+
+.cart-final{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    height: 46vh;
+}
+.cart-final .coupon{
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+}
+.coupon h2{
+    font-family: Nunito;
+}
+.coupon input, button{
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: 1px solid gray;
+    
+
+}
+ button{
+    background-color: rgb(61, 177, 147);
+    border: 2px solid rgb(54, 146, 120);
+    color: white;
+    cursor: pointer;
+}
+.cart-totals-section{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid rgb(201, 201, 201);
+    border-radius: 10px;
+    font-family: Nunito;
+}
+.cart-totals-section table{
+    border-collapse: collapse;
+    width: 30vw;
+    margin-bottom: 10px;
+}
+.cart-totals-section table tr td{
+    border: 1px solid rgb(205, 204, 204);
+}
+
+</style>
+</head>
+
+<body>
+    <section id="header">
+        <a href="./index.html"><img src="./Photos/logo.png" class="logo" alt=""></a>
+
+        <div id="navbar">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./shop.html" >Shop</a></li>
+            <li><a href="./Blog.html">Blog</a></li>
+            <li><a href="./About.html" >About</a></li>
+            <li><a href="./Contact.html">Contact</a></li>
+            <li><a href="./Cart.html" class="active"><img style="display: inline; width: 30px;" src="./Photos/bag.png" alt=""></a></li>
+
+        </div>
+    </section>
+
+    <div id="offers">
+        <div class="offer" id="know-us-section">
+            <h1>Cart</h1>
+            <p style="font-size: 1.5rem; color: rgb(155, 166, 171);"> Add your coupons and SAVE upto 70% !!</span>
+        </div>
+    </div>
+
+    <div id="cart-section">
+        <table width="100%" id="cart-table">
+            <thead>
+                <tr>
+                    <td>Remove</td>
+                    <td>Image</td>
+                    <td>Product</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>Subtotal</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#" class="delete-item"><i class="fa-regular fa-times-circle"></i></a></td>
+                    <td><img src="./Photos/f1.jpg" alt=""></td>
+                    <td>Cartoon Astronaut T-Shirt</td>
+                    <td>$139.00</td>
+                    <td><input type="number" value="1" min="0" max="100"></td>
+                    <td>$139.00</td>
+                </tr>
+                <tr>
+                    <td><a href="#"  class="delete-item"><i class="fa-regular fa-times-circle"></i></a></td>
+                    <td><img src="./Photos/f2.jpg" alt=""></td>
+                    <td>Cartoon Astronaut T-Shirt</td>
+                    <td>$139.00</td>
+                    <td><input type="number" value="1" min="0" max="100"></td>
+                    <td>$139.00</td>
+                </tr>
+                <tr>
+                    <td><a href="#"  class="delete-item"><i class="fa-regular fa-times-circle"></i></a></td>
+                    <td><img src="./Photos/f3.jpg" alt=""></td>
+                    <td>Cartoon Astronaut T-Shirt</td>
+                    <td>$139.00</td>
+                    <td><input type="number" value="1" min="0" max="100"></td>
+                    <td>$139.00</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="cart-final">
+            <div class="coupon">
+                <h2>Apply Coupon</h2>
+                <form action="">
+                    <input type="text" placeholder="Enter your coupon">
+                    <button type="submit">Apply</button>
+                </form>
+            </div>
+            <div class="cart-totals-section">
+                <h2>Cart Totals</h2>
+                <table>
+                    <tr>
+                        <td>Cart Subtotal</td>
+                        <td>$139.00</td>
+                    </tr>
+                    <tr>
+                        <td>Shopping</td>
+                        <td>Free</td>
+                    </tr>
+                    <tr>
+                        <td>Total</td>
+                        <td>$139.00</td>
+                    </tr>
+                </table>
+                <a href="./billing.html"><button>Proceed to Checkout</button></a>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer" style="background-color: rgb(237, 237, 251);">
+        <div class="footer-column">
+
+            <img src="./Photos/logo.png" alt="">
+            <h4>Contact</h4>
+            <p><strong style="color:black;">Address: </strong> Home No 1146, Gali No5, Kapashera
+                New Delhi 1100037</p>
+            <p><strong style="color:black;">Phone :</strong>9716139213</p>
+            <p><strong style="color:black;">Hours :</strong>10:00 -18:00,Mon -Sat</p>
+            <Div class="follow">
+                <h4>Follow us</h4>
+                <div class="footer-icon">
+                    <a href="https://www.facebook.com/dhirenderraj1234/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/rocktarun100/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://twitter.com/Dhirender__Raj" target="_blank"><i class="fa-brands fa-twitter"style="cursor: pointer;"></i></a>
+                    <a href="" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+                </div>
+            </Div>
+        </div>
+
+        <Div class="footer-column">
+            <h4>About</h4>
+            <a href="">About us</a>
+            <a href="">Delivery</a>
+            <a href="">Privacy</a>
+            <a href="">Terms and conditions</a>
+            <a href="">Contact</a>
+
+        </Div>
+
+
+        <Div class="footer-column">
+            <h4>My Account</h4>
+            <a href="">Sing in</a>
+            <a href="">View Cart</a>
+            <a href="">My wishlist</a>
+            <a href="">Track My Order</a>
+            <a href="">Help</a>
+        </Div>
+
+        <Div class="footer-column" >
+            <h4>Install App</h4>
+            <p>Form App Store or Google play</p>
+            <div id="app-links">
+                <img src="./Photos/app.jpg" alt="" style="cursor: pointer;">
+                <img src="./Photos/play.jpg" alt=""style="cursor: pointer;">
+            </Div>
+            <p>Sucured Payments Getway</p>
+            <img src="./Photos/pay.png" alt="" style="cursor: pointer;">
+        </Div>
+        
+        
+
+    </footer>
+    <div class="copyright">
+        <p>© 2023 | Made By Dhirender raj |</p>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+
+
+let cartTable = document.getElementById("cart-table");
+let crossButtons = document.querySelectorAll(".delete-item");
+crossButtons.forEach(btn => {
+    btn.onclick = function (e){
+        e.preventDefault();
+        
+        cartTable.children[1].removeChild(btn.parentElement.parentElement);
+    }
+})
+
+    </script>
+
+
+</body>
+
+</html>
